@@ -12,6 +12,8 @@ Object-Relational Mapping
 ## Table of Contents : 
 * [User Story](#user-story)
 * [Acceptance Criteria](#acceptance-criteria)
+* [Installation](#installation)
+* [Usage](#usage)
 * [Screenshots](#screenshots)
 * [License](#license)
 * [Resources](#resources)
@@ -38,6 +40,28 @@ THEN the data for each of these routes is displayed in a formatted JSON
 WHEN I test API POST, PUT and DELETE routes in Insomnia 
 THEN I am able to successfully create, update, and delete data in my database
 ```
+
+## Installation : 
+* `npm init` <br>
+* `npm install mysql 12` <br>
+* `npm install sequelize` <br>
+* `npm install dotenv` <br>
+
+## Usage : 
+Run the follwing command and answer the prompted questions: <br>
+
+`mysql -u root -p` <br>
+
+Enter PW when prompted <br>
+
+`source db/schema.sql` <br> 
+
+`quit` <br>
+
+`npm run seed` <br>
+
+`npm start` <br>
+
 
 ## Screenshots : 
 
