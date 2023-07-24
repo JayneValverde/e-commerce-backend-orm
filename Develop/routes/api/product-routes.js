@@ -3,16 +3,60 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // The `/api/products` endpoint
 
-// get all products
+// TODO: get all products
 router.get('/', (req, res) => {
   // find all products
   // be sure to include its associated Category and Tag data
+  Product.findAll({
+    attributes: ['id', 'product_name', 'price', 'stock'],
+    include: [
+      {
+        model: Category, 
+        attributes: ['category_name']
+      },
+      {
+        model: Tag, 
+        attribures: ['tag_name']
+      }
+    ]
+  })
+  .then(dbProductData => res.json(dbProductData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
-// get one product
+// TODO: get one product
 router.get('/:id', (req, res) => {
   // find a single product by its `id`
   // be sure to include its associated Category and Tag data
+  Product.fineOne({
+    where: {
+      id: req.params.id
+    },
+    attributes: ['id', 'product_name', 'price', 'stock'],
+    include: [
+      {
+        model: Category, 
+        attributes: ['category_name']
+      },
+      {
+        model: Tag, 
+        attributes: ['tag_name']
+      }
+    ]
+  })
+    .then(dbProductData => {
+      if (!dbProductData) {
+        res.status(404).json({message: 'No product found with this id'});
+      }
+      res.json(dbProductData);
+    })
+    .catch(err => {
+      console.log(err); 
+      res.status(500).json(err);
+    });
 });
 
 // create new product
@@ -89,8 +133,25 @@ router.put('/:id', (req, res) => {
     });
 });
 
+// TODO: Delete a user 
 router.delete('/:id', (req, res) => {
   // delete one product by its `id` value
+  Product.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+    .then(dbProductData => {
+      if  (!dbProductData) {
+        res.status(404).json({ Message: 'No product found with this id'});
+      }
+      res,json(dbProductData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
+
 
 module.exports = router;
