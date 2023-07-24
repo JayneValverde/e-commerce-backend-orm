@@ -31,7 +31,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   // find a single product by its `id`
   // be sure to include its associated Category and Tag data
-  Product.fineOne({
+  Product.findOne({
     where: {
       id: req.params.id
     },

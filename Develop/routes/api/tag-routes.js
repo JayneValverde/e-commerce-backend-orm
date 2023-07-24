@@ -31,13 +31,11 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    attribures: ['id', 'tag_name'],
-    include: [
+    include: 
       {
         model: Product, 
         attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
       }
-    ]
   })
     .then(dbTagData => {
       if (!dbTagData) {
