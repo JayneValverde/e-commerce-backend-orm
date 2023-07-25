@@ -42,17 +42,17 @@ THEN I am able to successfully create, update, and delete data in my database
 ```
 
 ## Installation : 
-* `npm init` <br>
-* `npm install mysql 12` <br>
-* `npm install sequelize` <br>
-* `npm install dotenv` <br>
+ `npm init` <br>
+ `npm install mysql 12` <br>
+ `npm install sequelize` <br>
+ `npm install dotenv` <br>
 
 ## Usage : 
 Run the follwing command and answer the prompted questions: <br>
 
 `mysql -u root -p` <br>
 
-Enter PW when prompted <br>
+Enter Passwordword when prompted <br>
 
 `source db/schema.sql` <br> 
 
@@ -67,7 +67,9 @@ Enter PW when prompted <br>
 
 
 ## Resources : 
+**ASK BCS** <br>
 
+**MODULE 13** <br>
 
 ## License : 
 This project is licensed under MIT

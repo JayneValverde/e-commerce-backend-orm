@@ -8,11 +8,10 @@ router.get('/', (req, res) => {
   // find all tags
   // be sure to include its associated Product data
   Tag.findAll({
-    attributes: ['id', 'tag_name'],
     include: [
       {
         model: Product, 
-        attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
+        attributes: ['product_name', 'price', 'stock', 'category_id']
       }
     ]
   })
@@ -72,8 +71,8 @@ router.put('/:id', (req, res) => {
     }
   })
     .then(dbTagData => { 
-      if (!dbTagData){
-        res.status(404).json({message:'No tag foudn with this id'});
+      if (!dbTagData[0]){
+        res.status(404).json({message:'No tag found with this id'});
         return;
       }
       res.json(dbTagData);

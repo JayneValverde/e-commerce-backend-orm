@@ -44,8 +44,9 @@ router.get('/:id', (req, res) => {
   });
 });
 
+// TODO: ------------------------------
 router.post('/', (req, res) => {
-  // TODO: create a new category
+  // create a new category
   Category.create({
     category_name: req.body.category_name
   })
