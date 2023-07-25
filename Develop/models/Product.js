@@ -19,7 +19,7 @@ Product.init(
     // define product_name column
     product_name: {
       type: DataTypes.STRING, 
-      allowNull: false
+      // allowNull: false
     },
     // define price column
     price: {

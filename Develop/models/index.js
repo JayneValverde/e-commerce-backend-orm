@@ -7,7 +7,8 @@ const ProductTag = require('./ProductTag');
 // Product belongsTo Category
 // Defines a Category association starting with a Product 
 Product.belongsTo(Category, {
-  foreignKey: 'category_id'
+  foreignKey: 'category_id',
+  onDelete: 'CASCADE',
 });
 
 // Categories have many Products
