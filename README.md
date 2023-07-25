@@ -7,6 +7,7 @@ Object-Relational Mapping
 ### **_[LINK TO WALKTHROUGH VIDEO](https://youtu.be/FnWnYZZOs9Q)_**
 
 ## Description : 
+This project uses the back end for an e-commerce site. Taking a working Expres.js API and configuring it to use Sequelize to interact with a MySQL database. 
 
 
 ## Table of Contents : 
