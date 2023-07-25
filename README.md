@@ -4,7 +4,7 @@ Object-Relational Mapping
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-### **_[LINK TO WALKTHROUGH VIDEO](https://www.youtube.com/watch?v=hUyMRiJQq0Y)_**
+### **_[LINK TO WALKTHROUGH VIDEO](https://youtu.be/FnWnYZZOs9Q)_**
 
 ## Description : 
 
@@ -14,9 +14,9 @@ Object-Relational Mapping
 * [Acceptance Criteria](#acceptance-criteria)
 * [Installation](#installation)
 * [Usage](#usage)
-* [Screenshots](#screenshots)
 * [License](#license)
 * [Resources](#resources)
+* [Issues](#issues)
 * [Questions](#questions)
 
 ## User Story : 
@@ -62,10 +62,6 @@ Enter Passwordword when prompted <br>
 
 `npm start` <br>
 
-
-## Screenshots : 
-
-
 ## Resources : 
 **ASK BCS** <br>
 
@@ -73,6 +69,11 @@ Enter Passwordword when prompted <br>
 
 ## License : 
 This project is licensed under MIT
+
+## Issues : 
+
+I am receiving `404` messages when trying to PUT & DELETE through PRODUCTS. <br>
+Last minute bugs to work out. 
 
 ## Questions : 
 Follow me on GitHub at [JayneValverde](https://github.com/JayneValverde) <br>
